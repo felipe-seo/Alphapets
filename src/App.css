@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+body{
+    max-height: 750px;
+    background-image: url("assets/Background.svg") ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:left;
+    font-family: 'Bungee', cursive;    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-block{
+    display:flex;
+    width: 100%;
+    height: 100%;
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+    max-height:750px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.loginPanel form {
+    padding-top: 40px;
+    width: 400px;
+    height: 600px;
+    border: 1px solid black;
+    position: relative;
+    margin-top:2%;
+    left: 65%; 
+    display:flex;
+    flex-direction: column;   
+    align-items: center;
+    border-radius:30px;
+    background-color:#4d9ee04d;    
+    
+}
+.loginPanel form input,
+.loginPanel form button {
+    width:280px;
+    height: 50px;
+    margin:10px;
+    border-radius: 10px;
+    font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.loginPanel form button {
+    background-color: #4D54E0;
+    color:rgb(255, 255, 255);
+    font-weight: bolder;    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loginPanel form #forgotPassword {
+    font-weight: bolder;
+    margin-top:40px;
+    margin-bottom:60px;
+    font-size: 20px;
+}
+
+.input-error {
+    color:rgb(206, 10, 10);
+    font-size: 12px;
+    font-weight: 100;
+    line-height:12px;
+}
+.leftPanel {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    width: 20%;
+    height: 95vh;
+    background-color: #4D54E0;
+    border-radius: 30px;
+    
+    
+}
+
+.rightPanel {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 90vh;
+    
+}
+.leftPanel ul {
+    list-style: none;
+    padding:0;
+}
+
+.leftPanel li {
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+.leftPanel li a {    
+    flex: 1;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.leftPanel li a:hover {
+    background: #00000030;
+}
+
+.rightPanel .leftAnimalCard,
+.rightPanel .leftAppointmentCard {    
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    text-align: center;
+}
+
+.rightPanel .animalCard,
+.rightPanel .appointmentCard {
+    border:2px solid blue;
+    display: flex;
+    max-height: 50%;
+}
+
+.rightPanel .leftAnimalCard img {
+    border-radius: 50%;    
+}
+.rightPanel .animalDescription,
+.rightPanel .appointmentDescription {
+    border:2px solid green;
+    
 }
